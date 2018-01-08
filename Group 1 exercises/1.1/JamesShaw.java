@@ -9,6 +9,6 @@ class Main
 {
     public static void main( String args[] )
     {
-        System.out.print( "Hello Brighton");
+        System.out.print( "Hello Brighton");    //I have used the print method to send the message "Hello Brighton" to the terminal.
     }
 }
