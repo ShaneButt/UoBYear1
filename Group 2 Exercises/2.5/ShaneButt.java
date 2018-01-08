@@ -1,3 +1,17 @@
+/**
+ * Construct a program that reads in a number of coins (changes with iteration)
+ * and calculates the least amount of coins that can be used to achieve
+ * this number, the coins used are: 200p 100p 50p 20p 10p 5p 2p 1p
+ *
+ * the method used here is quite verbose and complicated.
+ *
+ * *commenting needed*
+ *
+ * @author Shane Butt - Student sb1451
+ * original upload date: 17/10/2017
+ * @finalVersion 12/11/2017
+ */
+
 class Main
 {
     private static int NumCoins;
@@ -40,7 +54,7 @@ class Main
     {
         amount = BIO.getInt();
         psuedoAmount = amount;
-	System.out.printf("%s %-2s\n", "Amount", "Coins");
+	    System.out.printf("%s %-2s\n", "Amount", "Coins");
         while (amount!=0)
         {
             if (amount < 1 || amount > 500)
