@@ -9,25 +9,26 @@ class Main
 {
     public static void main( String args[] )
     {
-        String word = BIO.getString();
+        String word = BIO.getString();						//get word as input
+	String newWord = "";
+	String backwards = "";							//create other variables
 		
-        while (! "END".equals(word))
+        while (!word.equals("END"))						//while word does not equal "END"
         {
-            String newWord = word.toLowerCase();
-			String backwards = "";
-			for (int i = word.length(); i > 0; i--)
+            newWord = word.toLowerCase();					//newWord equals word as all lower case
+	    for (int i = word.length(); i > 0; i--)				//for all values from 0 to word length in descending order
             {
-                backwards = backwards + newWord.charAt(i-1);
+                backwards = backwards + newWord.charAt(i-1);			//add the character at position i-1 to the end of backwards
             }
-            if ( newWord.equals(backwards))
+            if ( newWord.equals(backwards))					//if newWord equals backwards
             {
-                System.out.printf("%-10s %-10s",word,"is a palindrome");
+                System.out.printf("%-10s %-10s",word,"is a palindrome");	//print that word is a palindrome
             }
-            else
+            else								//if newWord does not equal backwards
             {
-                System.out.printf("%-10s %-10s",word,"is not a palindrome");
+                System.out.printf("%-10s %-10s",word,"is not a palindrome");	//print that word is not a palindrome
             }
-            word = BIO.getString();
+            word = BIO.getString();						//get a new word
         }
     }
 }
