@@ -3,8 +3,8 @@
  * and exam marks, calculate their overall mark (the average)
  * And outputs whether the student passed, hit the threshold but failed, or failed.
  *
- * @author Shane Butt - Student sb1451
- * @version 06/10/2017
+ * @author Shane Butt - Student sb1451;
+ * @version 06/10/2017;
  */
 
 class Main

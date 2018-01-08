@@ -7,9 +7,9 @@
  *
  * *commenting needed*
  *
- * @author Shane Butt - Student sb1451
- * original upload date: 17/10/2017
- * @finalVersion 12/11/2017
+ * @author Shane Butt - Student sb1451;
+ * original upload date: 17/10/2017;
+ * @finalVersion 12/11/2017;
  */
 
 class Main

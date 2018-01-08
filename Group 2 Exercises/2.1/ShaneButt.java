@@ -3,7 +3,7 @@
  * And outputs whether the student passed or failed.
  *
  * @author Shane Butt - Student sb1451
- * @version 06/10/2017
+ * @version 06/10/2017;
  */
 
 class Main

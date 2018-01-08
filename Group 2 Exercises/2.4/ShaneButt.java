@@ -1,8 +1,8 @@
 /*
- * Construct a program that creates a diamond using *'s and .'s
+ * Construct a program that creates a diamond using *'s and .'s;
  *
- * @author Shane Butt sb1451
- * @version 08/10/2017
+ * @author Shane Butt sb1451;
+ * @version 08/10/2017;
  */
 public class Main
 {

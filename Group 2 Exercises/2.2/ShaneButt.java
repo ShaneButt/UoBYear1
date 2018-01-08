@@ -4,7 +4,7 @@
  * a 1st a 2.1, 2.2, a 3rd or if they failed.
  *
  * @author Shane Butt - Student sb1451
- * @version 06/10/2017
+ * @version 06/10/2017;
  */
 
 class Main

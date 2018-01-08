@@ -3,8 +3,8 @@
  * and creates a square whose exterior/outline is constructed
  * of *'s and interior/body is filled with periods/full stops (.'s)
  *
- * @author Shane Butt sb1451
- * @version 05/10/2017
+ * @author Shane Butt sb1451;
+ * @version 05/10/2017;;
  */
 public class Main
 {
