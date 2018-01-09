@@ -1,6 +1,10 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 public class Main {
 	public static void main(String[] args) {
-		int sn = BIO.getInt();
+		int sn = BIO.getInt(); //sn is Student Number
 		while (sn != 0) {
 			double cw = BIO.getInt();
 			double ex = BIO.getInt();
