@@ -1,3 +1,7 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		while (true) {
@@ -7,7 +11,7 @@ public class Main {
 			}
 			int withspaces = input.length();
 			int nospaces = input.toLowerCase().replace("a", "").replace("e", "").replace("i", "").replace("o", "").replace("u", "").length();
-			int x = withspaces - nospaces;
+			int x = withspaces - nospaces;	//Same method as 3.1, except it replaces vowels
 			
 			System.out.print("[  ");
 			if (x < 10) {
