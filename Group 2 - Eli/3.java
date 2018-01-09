@@ -1,16 +1,20 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-	public static List<String> nameList = new ArrayList<String>();
+	public static List<String> nameList = new ArrayList<String>();		//Declares 4 Lists for storing values
 	public static List<Integer> courseworkList = new ArrayList<Integer>();
 	public static List<Integer> examList = new ArrayList<Integer>();
 	public static List<Double> scoreList = new ArrayList<Double>();
 
 	public static void main(String[] args) {
-		String name = "";
+		String name = "";						//Variables for current values
 		int coursework, exam = 0;
 		double score;
 
@@ -23,9 +27,9 @@ public class Main {
 			coursework = BIO.getInt();
 			exam = BIO.getInt();
 			score = (((double)coursework + (double)exam)/ 2);
-			DecimalFormat df = new DecimalFormat("#.#");
-			df.setRoundingMode(RoundingMode.CEILING);
-			nameList.add(name);
+			DecimalFormat df = new DecimalFormat("#.#");		//DecimalFormat is an alternative to using
+			df.setRoundingMode(RoundingMode.CEILING);		//the printf() function. setRoundingMode 
+			nameList.add(name);					//tells the formatter to round up.
 			courseworkList.add(coursework);
 			examList.add(exam);
 			scoreList.add(score);
