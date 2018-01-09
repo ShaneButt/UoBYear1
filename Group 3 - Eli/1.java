@@ -1,3 +1,7 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		String input = BIO.getString();
@@ -8,8 +12,8 @@ public class Main {
 			}
 			int withspaces = input.length();
 			int nospaces = input.replace(" ", "").length();
-			int count = withspaces - nospaces;
-			
+			int count = withspaces - nospaces;		// Length of string with spaces - length of
+									// string without spaces = amount of spaces
 			System.out.print("[");
 			if (count < 10) {
 				System.out.print(" " + count);
@@ -17,7 +21,7 @@ public class Main {
 				System.out.print(count);
 			}
 			System.out.print("] spaces in ");
-			System.out.println("\"" + input + "\"");
+			System.out.println("\"" + input + "\"");	// Print statement split for code readability
 		}
 	}
 }
