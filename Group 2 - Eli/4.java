@@ -1,3 +1,7 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 public class Main {
 	public static void main(String[] args) {
 		int sqr = BIO.getInt();
@@ -15,6 +19,7 @@ public class Main {
 	    {
 	        for (int column=0; column<sqr; column++)
 	        {
+		    //This is a mathematical function for detecting the distance from the center of a character.
 	            if ((column == Math.abs(row - half)) || (column == (row + half)) || (column == (sqr - row + half - 1)))
 	            {
 	                System.out.print("*");
