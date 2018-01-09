@@ -1,3 +1,8 @@
+/**
+ * Eli Murray - ejdm11
+ * Cheekily stolen from James Shaw
+ */
+
 public class Main
 {
     public static void main( String args[] )
