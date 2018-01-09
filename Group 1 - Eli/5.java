@@ -1,6 +1,10 @@
+/**
+ * Eli Murray - ejdm11
+ */
+
 public class Main {
 	public static void main(String[] args) {
-		String topLine = "";
+		String topLine = "";		//Initialise 3 variables, similar to 1.4
 		String bottomLine = "";
 		String midLine="*";
 		int size = BIO.getInt();
