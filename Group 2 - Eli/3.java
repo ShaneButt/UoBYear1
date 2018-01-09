@@ -28,9 +28,9 @@ public class Main {
 			exam = BIO.getInt();
 			score = (((double)coursework + (double)exam)/ 2);
 			DecimalFormat df = new DecimalFormat("#.#");		//DecimalFormat is an alternative to using
-			df.setRoundingMode(RoundingMode.CEILING);		//the printf() function. setRoundingMode 
-			nameList.add(name);					//tells the formatter to round up.
-			courseworkList.add(coursework);
+			df.setRoundingMode(RoundingMode.CEILING);		//the printf() function to show a set
+			nameList.add(name);					//number of decimal points. The
+			courseworkList.add(coursework);				//RoundingMode.CEILING tells it to round up.
 			examList.add(exam);
 			scoreList.add(score);
 
