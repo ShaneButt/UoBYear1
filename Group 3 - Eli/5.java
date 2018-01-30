@@ -1,88 +1,61 @@
-/**
- * Eli Murray - ejdm11
- * Cheekily stolen from James Shaw
- */
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
-public class Main
-{
-    public static void main( String args[] )
-    {
-        System.out.print("#Width: ");
+class Main {
+    public static void main( String args[] ) {
+        System.out.print("#Enter width" );
         int width = BIO.getInt();
-        System.out.print("#Line: ");
+        System.out.print("#Enter line of text : " );
         String line = BIO.getString().trim();
-        while (!line.equals("END"))
-        {
-            String processed = reformat(line,width);
-            processed = processed.replace(' ','.');
-            System.out.println(processed);
-            
-            System.out.print("#Enter line of text: ");
+
+        while (! line.equals( "END" )) {
+            System.out.println(reformat( line, width ).replace( ' ', '.' ));
+            System.out.print("#Enter line of text : " );
             line = BIO.getString().trim();
         }
     }
-    public static int countSpaces(String str)
-    {
-        int spaces = 0;
-        for (int i = 0; i < str.length(); i++)
-        {
-            if (str.charAt(i) == ' ')
-            {
-                spaces++;
-            }
-        }
-        return spaces;
-    }
-    public static String stringOfSpaces (int num)
-    {
+
+    public static String stringOfSpaces( int num ) {
         String spaces = "";
-        for (int k = 0; k < num; k++)
-        {
+        for (int i = 0; i < num; i++) {
             spaces = spaces + " ";
         }
         return spaces;
     }
-    public static String anExtraSpace(int extra)
-    {
-        if(extra > 0)
-        {
-            return(" ");
+
+    public static String reformat(String oLine, int width ) {
+        if (oLine.length() == width) {
+            return oLine;
         }
-        else
-        {
-            return("");
+        if (oLine.length() > width) {
+            return "#grater than width";
         }
-    }
-    public static String reformat (String Line, int width)
-    {
-        String spacesStr;
-        int spaces = 0;
-        int numSpaces = 0;
-        int extra = 0;
-        spaces = countSpaces (Line);
-        if (spaces == 0)
-        {
-            numSpaces = width - Line.length();
-            spacesStr = stringOfSpaces(numSpaces);
-            Line = Line + spacesStr;
+
+        String reformattedLine = "";
+        Scanner scanLine = new Scanner(oLine);
+        List<String> dividedLine = new ArrayList<>();
+        int numOfCharacters = 0;
+
+        while(scanLine.hasNext()) {
+            String word = scanLine.next();
+            numOfCharacters += word.length();
+            dividedLine.add(word);
         }
-        else
-        {
-            numSpaces = (width - Line.length())/spaces + 1;
-            spacesStr = stringOfSpaces(numSpaces);
-            Line = Line.replace(" ",spacesStr);
-            extra = width - Line.length();
-            for (int i = 0; i < Line.length(); i++)
-            {
-                if (Line.charAt(i) == ' ' && Line.charAt(i-1) != ' ')
-                {
-                    Line= Line.substring(0,i) + anExtraSpace(extra) + Line.substring(i);
-                    extra--;
-                }
-            }
+        if (dividedLine.size() == 1) {
+            reformattedLine += dividedLine.get(0) + stringOfSpaces(width-dividedLine.get(0).length());
+            return reformattedLine;
         }
-        
-        
-        return Line;
+        int spaces = width - numOfCharacters;
+        int words = dividedLine.size()-1;
+        int spacesOfWord = spaces/words;
+        int extraSpace = spaces%words;
+
+        for (int i = 0; i < words; i++) {
+            int gaps = i < extraSpace ? spacesOfWord+1 : spacesOfWord;
+            reformattedLine += dividedLine.get(i) + stringOfSpaces(gaps);
+        }
+
+        return reformattedLine + dividedLine.get(dividedLine.size()-1);
     }
 }
